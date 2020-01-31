@@ -29,7 +29,7 @@ namespace whatwedo\SearchBundle\Repository;
 
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Annotations\AnnotationReader;
-use Symfony\Bridge\Doctrine\RegistryInterface;
+use Doctrine\Persistence\ManagerRegistry;
 use whatwedo\SearchBundle\Annotation\Searchable;
 use whatwedo\SearchBundle\Entity\Index;
 use whatwedo\SearchBundle\Entity\PostSearchInterface;
@@ -42,9 +42,9 @@ use whatwedo\SearchBundle\Entity\PreSearchInterface;
 class IndexRepository extends ServiceEntityRepository
 {
     /**
-     * @param RegistryInterface $registry
+     * @param ManagerRegistry $registry
      */
-    public function __construct(RegistryInterface $registry)
+    public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Index::class);
     }

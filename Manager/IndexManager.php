@@ -32,7 +32,7 @@ use Doctrine\Common\Persistence\Mapping\ClassMetadata;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Query\ResultSetMapping;
-use Symfony\Bridge\Doctrine\RegistryInterface;
+use Doctrine\Persistence\ManagerRegistry;
 use whatwedo\SearchBundle\Annotation\Index;
 use whatwedo\SearchBundle\Exception\IdMethodNotFound;
 use whatwedo\SearchBundle\Exception\MethodNotFoundException;
@@ -45,7 +45,7 @@ class IndexManager
 {
 
     /**
-     * @var RegistryInterface
+     * @var ManagerRegistry
      */
     protected $doctrine;
 
@@ -56,9 +56,9 @@ class IndexManager
 
     /**
      * IndexManager constructor.
-     * @param RegistryInterface $doctrine
+     * @param ManagerRegistry $doctrine
      */
-    public function __construct(RegistryInterface $doctrine)
+    public function __construct(ManagerRegistry $doctrine)
     {
         $this->doctrine = $doctrine;
     }

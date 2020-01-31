@@ -67,7 +67,7 @@ class Index
     /**
      * @var integer
      *
-     * @ORM\Column(name="foreign_id", type="integer", nullable=false)
+     * @ORM\Column(name="foreign_id", type="string", nullable=false)
      */
     protected $foreignId;
 
@@ -111,7 +111,7 @@ class Index
     }
 
     /**
-     * @return int
+     * @return string
      */
     public function getForeignId()
     {
@@ -119,7 +119,7 @@ class Index
     }
 
     /**
-     * @param int $foreignId
+     * @param string $foreignId
      * @return Index
      */
     public function setForeignId($foreignId)
