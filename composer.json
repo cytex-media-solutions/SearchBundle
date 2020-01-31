@@ -1,5 +1,5 @@
 {
-    "name": "whatwedo/search-bundle",
+    "name": "cytex/search-bundle",
     "type": "symfony-bundle",
     "description": "Full text search on Doctrine entities without external dependencies.",
     "license": "MIT",
